@@ -1,3 +1,6 @@
+## zhipuai-site-clone
+## just for practice
+
 # Next.js GitHub Pages
 
 Deploy Next.js to GitHub Pages with GitHub Actions. [View the deployed app](https://gregrickaby.github.io/nextjs-github-pages/) 🚀
