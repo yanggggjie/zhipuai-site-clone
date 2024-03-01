@@ -4,9 +4,5 @@ import Copyright from '@/app/components/Copyright/Copyright'
 interface Props {}
 
 export default function Page({}: Props) {
-  return (
-    <div>
-      <Copyright></Copyright>
-    </div>
-  )
+  return <div></div>
 }

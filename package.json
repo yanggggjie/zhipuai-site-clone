@@ -18,6 +18,7 @@
     "react-fast-marquee": "^1.6.4"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "@types/lodash": "^4.14.202",
     "@types/node": "^20",
     "@types/react": "^18",

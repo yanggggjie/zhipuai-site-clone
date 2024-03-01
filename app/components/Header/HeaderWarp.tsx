@@ -5,12 +5,13 @@ import { basePath } from '@/lib/util'
 import Header from '@/app/components/Header/Header'
 import React, { ReactNode } from 'react'
 import useIsHome from '@/app/hooks/useIsHome'
-import Copyright from '@/app/components/Copyright/Copyright'
+import HomeBanner from '@/app/components/HomeBanner/HomeBanner'
 interface Props {
-  children: ReactNode
+  header: ReactNode
+  homeBanner: ReactNode
 }
 
-export default function Main({ children }: Props) {
+export default function HeaderWarp({ header, homeBanner }: Props) {
   const { isHome } = useIsHome()
 
   return (
@@ -25,18 +26,12 @@ export default function Main({ children }: Props) {
             style={{
               backgroundImage: `url('${basePath + '/banner_bg.jpg'}')`,
             }}
-          >
-            {children}
-          </div>
-          <Header></Header>
+          ></div>
+          {header}
+          {homeBanner}
         </main>
       )}
-      {!isHome && (
-        <main className={clsx('bg-[#fbfbfb]')}>
-          <div className={'pt-20'}>{children}</div>
-          <Header></Header>
-        </main>
-      )}
+      {!isHome && <main className={clsx('bg-[#fbfbfb]')}>{header}</main>}
     </>
   )
 }
