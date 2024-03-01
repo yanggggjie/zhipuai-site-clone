@@ -23,7 +23,6 @@ export default function LogoMarquee() {
       path: basePath + item.path,
     }
   })
-  console.log(imageList)
 
   return (
     <div>
