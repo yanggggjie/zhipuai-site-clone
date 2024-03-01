@@ -5,6 +5,7 @@ import { basePath } from '@/lib/util'
 import Header from '@/app/components/Header/Header'
 import React, { ReactNode } from 'react'
 import useIsHome from '@/app/hooks/useIsHome'
+import Copyright from '@/app/components/Copyright/Copyright'
 interface Props {
   children: ReactNode
 }

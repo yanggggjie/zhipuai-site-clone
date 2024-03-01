@@ -2,11 +2,16 @@ import Image from 'next/image'
 import Header from '@/app/components/Header/Header'
 import { basePath } from '@/lib/util'
 import { clsx } from 'clsx'
+import Marquee from '@/app/components/LogoMarquee/LogoMarquee'
+import Copyright from '@/app/components/Copyright/Copyright'
+import React from 'react'
 
 export default function Home() {
   return (
     <div className={clsx()}>
       <Banner></Banner>
+      <Marquee></Marquee>
+      <Copyright></Copyright>
     </div>
   )
 }
