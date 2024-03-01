@@ -2,6 +2,7 @@ import { clsx } from 'clsx'
 import Nav from '@/app/components/Header/Nav'
 import { basePath } from '@/lib/util'
 import HiddenAble from '@/app/components/Header/HiddenAble'
+import { Logo } from '@/app/components/Header/Logo'
 interface Props {}
 
 export default function Header({}: Props) {
@@ -17,16 +18,6 @@ export default function Header({}: Props) {
         <CooperationButton></CooperationButton>
       </div>
     </HiddenAble>
-  )
-}
-
-function Logo() {
-  return (
-    <img
-      src={basePath + '/logo.png'}
-      alt="智谱AI"
-      className="box-border align-middle cursor-pointer block w-[110px] leading-[84px] text-[rgba(0,0,0,0.85)] text-[16px]"
-    />
   )
 }
 

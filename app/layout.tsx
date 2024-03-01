@@ -2,10 +2,11 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import React from 'react'
-import Copyright from '@/app/components/Copyright/Copyright'
+import Copyright from '@/app/components/Footer/Copyright'
 import HeaderWarp from '@/app/components/Header/HeaderWarp'
 import Header from '@/app/components/Header/Header'
 import HomeBanner from '@/app/components/HomeBanner/HomeBanner'
+import Footer from '@/app/components/Footer/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,7 +28,7 @@ export default function RootLayout({
           homeBanner={<HomeBanner />}
         ></HeaderWarp>
         {children}
-        <Copyright></Copyright>
+        <Footer></Footer>
       </body>
     </html>
   )
