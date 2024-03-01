@@ -23,14 +23,11 @@ export default function Header({}: Props) {
 
 function LanguageSwitcher() {
   return (
-    <div className="box-border items-center flex flex-row justify-center leading-[84px] text-[rgba(0,0,0,0.85)] text-[16px] mx-[24px] my-0">
+    <div className="box-border items-center flex flex-row justify-center gap-2 leading-[84px] text-[rgba(0,0,0,0.85)] text-[16px] mx-[24px] my-0">
       <div className="box-border text-[rgb(44,96,158)] cursor-pointer text-[16px] font-normal leading-[24px] opacity-60 transition-all duration-[0.2s] ease-[ease-in-out] delay-0">
         简
       </div>
-      <div
-        role="separator"
-        className="box-border text-[16px] leading-[25.144px] block h-[17.998px] relative top-[-0.96px] align-middle mx-[10px] my-0 border-l-[0.625px] border-l-[rgba(0,0,0,0.2)] border-t-0 border-t-[rgba(0,0,0,0.85)] border-none border-solid"
-      />
+      <div className={'text-gray-500'}>|</div>
       <div className="box-border text-[rgb(44,96,158)] cursor-pointer text-[16px] font-normal leading-[24px] opacity-60 transition-all duration-[0.2s] ease-[ease-in-out] delay-0">
         EN
       </div>
