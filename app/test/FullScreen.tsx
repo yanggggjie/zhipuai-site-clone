@@ -1,4 +1,5 @@
 import React from 'react'
+import { basePath } from '@/lib/util'
 
 const FullScreenBanner = () => {
   return (
@@ -6,11 +7,11 @@ const FullScreenBanner = () => {
       {/* 全屏背景图片 */}
       <div
         className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
-        style={{ backgroundImage: "url('/path-to-your-fullscreen-image.jpg')" }}
+        style={{ backgroundImage: `url('${basePath + '/banner_bg.jpg'}')` }}
       ></div>
 
       {/* 透明Header */}
-      <header className="absolute top-0 left-0 w-full flex justify-between items-center p-4 bg-opacity-50 bg-black text-white">
+      <header className="absolute top-0 left-0 w-full flex justify-between items-center p-4 bg-opacity-100 bg-black text-white">
         <h1>Logo</h1>
         <nav>
           {/* 导航项 */}

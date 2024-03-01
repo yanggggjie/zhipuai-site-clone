@@ -8,7 +8,6 @@ export default function Banner({}: Props) {
       <div
         className={clsx(
           'box-border text-white h-[570px] overflow-hidden text-center  text-[16px] leading-[25.144px]',
-          'bg-[url(https://www.zhipuai.cn/assets/images/aboutus/banner.png)]',
         )}
       >
         <h1 className="box-border font-medium text-[48px] leading-[55.2px] mt-[170px] mb-0">

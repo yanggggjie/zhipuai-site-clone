@@ -5,7 +5,7 @@ import { clsx } from 'clsx'
 
 export default function Home() {
   return (
-    <div>
+    <div className={clsx()}>
       <Banner></Banner>
     </div>
   )
@@ -14,15 +14,20 @@ export default function Home() {
 function Banner() {
   return (
     <div
-      style={{
-        background: 'url("/zhipuai-site-clone/banner_bg.jpg")',
-      }}
+      className={clsx(
+        'h-screen',
+        'relative',
+        'flex flex-col  items-start justify-center',
+        'pl-32',
+      )}
     >
       <Title></Title>
       <Text></Text>
       <OpenPlatform></OpenPlatform>
       <LogoList></LogoList>
-      <DownArrow></DownArrow>
+      <div className={'absolute'}>
+        <DownArrow></DownArrow>
+      </div>
     </div>
   )
 }
@@ -76,9 +81,16 @@ function LogoList() {
   })
 
   return (
-    <div className={clsx('flex flex-row items-center gap-2')}>
-      {logoList.map(({ url }) => {
-        return <img key={url} src={url} alt={url} />
+    <div className={clsx('flex flex-row items-center gap-8', 'mt-10')}>
+      {logoList.map(({ url }, index) => {
+        const isLast = index === logoList.length - 1
+
+        return (
+          <>
+            <img className={clsx('h-8')} key={url} src={url} alt={url} />
+            {!isLast && <span className={'text-[#5899fe]'}>|</span>}
+          </>
+        )
       })}
     </div>
   )

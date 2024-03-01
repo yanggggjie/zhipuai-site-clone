@@ -1,13 +1,12 @@
-import _ from 'lodash'
 import { clsx } from 'clsx'
 import Nav from '@/app/components/Header/Nav'
-import HiddenHeader from '@/app/components/test'
 import { basePath } from '@/lib/util'
+import HiddenAble from '@/app/components/Header/HiddenAble'
 interface Props {}
 
 export default function Header({}: Props) {
   return (
-    <HiddenHeader>
+    <HiddenAble>
       <div className={clsx('flex flex-row items-center', 'px-10')}>
         <div className={'flex flex-row  items-center gap-10'}>
           <Logo></Logo>
@@ -17,7 +16,7 @@ export default function Header({}: Props) {
         <LanguageSwitcher></LanguageSwitcher>
         <CooperationButton></CooperationButton>
       </div>
-    </HiddenHeader>
+    </HiddenAble>
   )
 }
 
