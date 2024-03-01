@@ -20,7 +20,7 @@ export default function Nav({}: Props) {
   ]
 
   return (
-    <div className={'flex flex-row items-center gap-2'}>
+    <div className={'flex flex-row items-center'}>
       {navList.map(({ title, url }) => {
         return (
           <Link
